@@ -11,6 +11,14 @@ function App() {
     setShowModal(false);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Escape") {
+      setShowModal(false);
+    }
+  };
+
+  document.addEventListener("keydown", handleKeyDown);
+
   return (
     <>
       <button className="show-modal" onClick={openModal}>
